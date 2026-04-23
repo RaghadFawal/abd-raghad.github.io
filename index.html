@@ -17,18 +17,20 @@ background:#f3efe7;
 
 body{
 cursor:pointer;
+perspective:1200px;
 }
 
-/* main image */
+/* background image */
 #screen{
 position:fixed;
 inset:0;
 background:url('frontpage.png') center center / cover no-repeat;
 transition:opacity 1.2s ease;
 animation:breath 5s ease-in-out infinite;
+z-index:1;
 }
 
-/* opening flap */
+/* triangle flap */
 #flap{
 position:fixed;
 top:0;
@@ -38,14 +40,15 @@ height:52%;
 background:#efe9dc;
 clip-path:polygon(0 0,100% 0,50% 100%);
 transform-origin:top center;
+transform:rotateX(0deg);
 transition:transform 1.5s ease;
 z-index:5;
-opacity:.92;
+opacity:.94;
 box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
 
 .open #flap{
-transform:rotateX(180deg);
+transform:rotateX(-170deg);
 }
 
 .fadeout{
@@ -53,12 +56,8 @@ opacity:0;
 }
 
 @keyframes breath{
-0%,100%{
-transform:scale(1.03);
-}
-50%{
-transform:scale(1.05);
-}
+0%,100%{transform:scale(1.03);}
+50%{transform:scale(1.05);}
 }
 </style>
 </head>

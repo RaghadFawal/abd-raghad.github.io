@@ -17,10 +17,8 @@ background:#f3efe7;
 
 body{
 cursor:pointer;
-perspective:1200px;
 }
 
-/* background image */
 #screen{
 position:fixed;
 inset:0;
@@ -30,7 +28,6 @@ animation:breath 5s ease-in-out infinite;
 z-index:1;
 }
 
-/* triangle flap */
 #flap{
 position:fixed;
 top:0;
@@ -39,16 +36,13 @@ width:100%;
 height:52%;
 background:#efe9dc;
 clip-path:polygon(0 0,100% 0,50% 100%);
-transform-origin:top center;
-transform:rotateX(0deg);
-transition:transform 1.5s ease;
 z-index:5;
+transition:transform 1.5s ease;
 opacity:.94;
-box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
 
 .open #flap{
-transform:rotateX(-170deg);
+transform:translateY(-120%);
 }
 
 .fadeout{
